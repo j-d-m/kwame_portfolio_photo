@@ -1,0 +1,12 @@
+@import url(./_contact.css);
+@import url(./_footer.css);
+@import url(./_hero.css);
+@import url(./_nav.css);
+@import url(./_policy.css);
+@import url(./_work.css);
+
+.App {
+  text-align: center;
+  width: 80%;
+  margin: 0px auto;
+}
