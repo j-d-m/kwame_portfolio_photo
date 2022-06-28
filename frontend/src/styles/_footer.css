@@ -1,3 +1,12 @@
-div {
-  color: #fff;
+.footer--wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.copyRight {
+  margin-left: 10px;
 }
