@@ -2,23 +2,6 @@ import React from "react";
 import Masonry from "react-masonry-css";
 
 export default function Hero() {
-  let items = [
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/300/200",
-  ];
   return (
     <div className="hero">
       <div className="quote">
