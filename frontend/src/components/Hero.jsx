@@ -1,27 +1,125 @@
-import React from "react";
-import Masonry from "react-masonry-css";
+import * as React from "react";
+// import PhotoAlbum from "react-photo-album";
+// import photos from "./Photos";
 
-export default function Hero() {
-  let items = [
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/400/400",
-    "https://picsum.photos/200/300",
-    "https://picsum.photos/300/200",
-  ];
+// function getRandomInt(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+// }
+// let min = Math.ceil(200);
+// let max = Math.floor(500);
+// let widthRandom = Math.floor(Math.random() * (max - min) + min);
+// console.log(widthRandom);
+// // console.log(getRandomInt(200, 600));
+// let images = [
+//   {
+//     id: 1,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 2,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 3,
+//     src: "https://picsum.photos/400/400",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 4,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 5,
+//     src: "https://picsum.photos/400/400",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 6,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 7,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 8,
+//     src: "https://picsum.photos/400/400",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 9,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 10,
+//     src: "https://picsum.photos/400/400",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 11,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 12,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 13,
+//     src: "https://picsum.photos/400/400",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 14,
+//     src: "https://picsum.photos/200/300",
+//     width: 260,
+//     height: widthRandom,
+//   },
+//   {
+//     id: 15,
+//     src: "https://picsum.photos/300/200",
+//     width: 260,
+//     height: widthRandom,
+//   },
+// ];
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// const rndInt = Math.floor(Math.random() * 6) + 1;
+// console.log(rndInt);
+
+function Hero() {
   return (
-    <div className="hero">
-      <div className="quote">
+    <div>
+      {/* <PhotoAlbum photos={photos} layout="masonry" key={photos.id} /> */}
+      <h1>hhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+    </div>
+  );
+}
+export default Hero;
+// <div className="hero">
+// {
+/* <div className="quote">
         <p>
           And I said this, “I fuckin’ hate being poor.” And my <br /> dad got
           really upset. He didn’t scream or howl. That <br /> wasn’t his way. He
@@ -39,13 +137,17 @@ export default function Hero() {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {/* array of JSX items */}
-        {items.map((currentValue) => {
+        {/* array of JSX items */
+// }
+// {
+/* {items.map((currentValue) => {
           console.log(currentValue);
           return <img src={currentValue} />;
         })}
-      </Masonry>
-      {/* <main>
+      </Masonry> */
+// }
+// {
+/* <main>
         <div class="item-1">
           <img src="https://picsum.photos/300/600/?random" />
         </div>
@@ -72,7 +174,6 @@ export default function Hero() {
         <div class="item-8">
           <img src="https://picsum.photos/200/600/?random" />
         </div>
-      </main> */}
-    </div>
-  );
-}
+      </main> */
+// }
+// </div>
