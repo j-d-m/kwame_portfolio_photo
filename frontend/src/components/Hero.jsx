@@ -1,9 +1,8 @@
-import React from "react";
-import Masonry from "react-masonry-css";
+import * as React from "react";
 
-export default function Hero() {
+function Hero() {
   return (
-    <div className="hero">
+    <div>
       <div className="quote">
         <p>
           And I said this, “I fuckin’ hate being poor.” And my <br /> dad got
@@ -19,3 +18,4 @@ export default function Hero() {
     </div>
   );
 }
+export default Hero;
