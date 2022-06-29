@@ -4,5 +4,9 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 50px;
   grid-row-gap: 50px;
-  border: 1px solid red;
+  outline: solid red;
+}
+
+div {
+  color: black;
 }

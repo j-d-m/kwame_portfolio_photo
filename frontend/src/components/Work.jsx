@@ -9,6 +9,7 @@ function Work() {
       <div>Great Outdoors</div>
       <div>Curls</div>
       <div>Black and white</div>
+      <div>people of brighton</div>
     </div>
   );
 }
