@@ -191,7 +191,6 @@ function Policy() {
           {/* NUMBER 4 */}{" "}
           <section>
             <li>
-              Cookies
               <p>
                 Wir setzen auf unserer Seite Cookies ein. Hierbei handelt es
                 sich um kleine Dateien, die Ihr Browser automatisch erstellt und
