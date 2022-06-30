@@ -1,7 +1,9 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  outline: solid blue;
+  background-color: black;
 }
 a {
   text-decoration: none;

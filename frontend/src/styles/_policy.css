@@ -1,11 +1,19 @@
-main {
-  color: #000;
-  background-color: #fff;
+.policyMainContainer {
+  /* outline: solid orange; */
+  width: 100%;
+  background: white;
+}
+
+.policy--container {
+  color: black;
+  width: 800px;
+  word-wrap: break-word;
+  margin-left: 260px;
   text-align: left;
   font-size: 16px;
-  width: 100%;
 }
 .email {
   font-size: 16px;
   padding-right: 10px;
+  color: black;
 }
