@@ -19,7 +19,7 @@ export default function Nav() {
           Privacy Policy
         </NavLink>
 
-        <a href="#">
+        <a href="https://www.instagram.com/kwame_boama/">
           <AiOutlineInstagram />
         </a>
       </ul>

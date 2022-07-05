@@ -11,3 +11,8 @@
   margin: 0px auto;
   /* outline: solid green; */
 }
+
+a:visited {
+  color: #0000;
+  outline: solid red;
+}
