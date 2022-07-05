@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  /* color: white; */
   /* background-color: black; */
-  /* height: 100vh; */
+  height: 100vh;
   font-family: "Playfair Display", serif;
 }

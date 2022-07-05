@@ -1,3 +1,38 @@
-div {
-  color: #fff;
+.contact--main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  /* width: 90vw; */
+  letter-spacing: 1.5px;
+  text-align: center;
 }
+
+.contact--main h2 {
+  margin-bottom: 100px;
+}
+
+h2 span {
+  padding: 5px;
+}
+
+.contact--main p {
+  margin-bottom: 40px;
+}
+
+.contact--main a:visited {
+  color: #000000;
+}
+
+.mail {
+  text-decoration: none;
+  border-bottom: 1.5px solid #000000;
+}
+
+/* why is this not working ?? */
+.contact--main .mail a:visited {
+  color: #000000;
+}
+
+/* TODO - set the color of the email after visiting */
