@@ -4,6 +4,7 @@
 @import url(./_nav.css);
 @import url(./_policy.css);
 @import url(./_work.css);
+@import url(./_adminForm.css);
 
 .App {
   text-align: center;

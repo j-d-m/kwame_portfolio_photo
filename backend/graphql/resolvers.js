@@ -24,7 +24,7 @@ const resolvers = {
     async loginAdmin(_, { email, password }, { req }) {
       const admin = await AdminCollection.findOne({ email: email });
       if (!admin) {
-        throw new Error("you have to ask for access");
+        throw new Error("Contact Administrator");
       }
       const isMatch = await bcrypt.compare(password, admin.password);
       if (!isMatch) {
