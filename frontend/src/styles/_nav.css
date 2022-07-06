@@ -12,16 +12,13 @@
   font-size: 1.3rem;
 }
 .active {
-  color: rgba(255, 0, 0, 0.689);
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #fff;
 }
 .nav-links a {
   margin-left: 20px;
 }
 .nav-links :last-child {
   margin-left: 30px;
-}
-
-.nav-links li {
-  padding: 20px;
-  font-size: 1.2rem;
 }

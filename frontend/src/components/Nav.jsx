@@ -5,7 +5,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 export default function Nav() {
   return (
     <div className="container">
-      <NavLink to="/" activeclassname="active">
+      <NavLink to="/">
         <h1>Kwame Boama</h1>
       </NavLink>
       <ul className="nav-links">

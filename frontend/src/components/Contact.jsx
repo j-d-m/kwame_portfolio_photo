@@ -3,29 +3,25 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 function Contact() {
   return (
-    <main className="contact--main">
+    <div className="contact--container">
+      {" "}
       <h2>
         Photographer <span>|</span> Director
       </h2>
-
-      <p className="mail">
-        Mail:
+      <main className="contact--main">
         <a className="mail" href="mailto:kwameboama@hotmail.com">
           {" "}
-          kwameboama@hotmail.com
+          Mail:<span>kwameboama@hotmail.com</span>
         </a>
-      </p>
-
-      <p>Telephone: +49 15772816026</p>
-
-      <p>
-        Berlin based photographer <span>&amp;</span> director
-      </p>
-
-      <a href="https://www.instagram.com/kwame_boama/">
-        <AiOutlineInstagram style={{ "font-size": "1.6rem" }} />
-      </a>
-    </main>
+        <p>Telephone: +49 15772816026</p>
+        <p>
+          Berlin based photographer <span>&amp;</span> director
+        </p>
+        <a href="https://www.instagram.com/kwame_boama/">
+          <AiOutlineInstagram size={30} color="black" />
+        </a>
+      </main>
+    </div>
   );
 }
 
