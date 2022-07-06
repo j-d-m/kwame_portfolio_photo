@@ -17,7 +17,7 @@ function Policy() {
                 Diese Datenschutz-Information gilt für die Datenverarbeitung
                 durch:
               </p>
-              <address>
+              <span>
                 {" "}
                 <p>
                   Verantwortlicher: Kwame Boama, Grüntalerstr 26, 13357 Berlin
@@ -28,7 +28,7 @@ function Policy() {
                   kwameboama@hotmail.com
                 </a>
                 <span>Telefon: +49 157 728 160 26</span>
-              </address>
+              </span>
             </li>
           </section>
           {/* NUMBER 2 */}
@@ -273,10 +273,10 @@ function Policy() {
                     >
                       (https://www.google.de/intl/de/about/)
                     </a>{" "}
-                    <address>
+                    <span>
                       (1600 Amphitheatre Parkway, Mountain View, CÆ 94043, USA;
                       im Folgenden „Google“).
-                    </address>{" "}
+                    </span>{" "}
                     In diesem Zusammenhang werden pseudonymisierte
                     Nutzungsprofile erstellt und Cookies (siehe unter Ziff. 4)
                     verwendet. Die durch den Cookie erzeugten Informationen über
@@ -395,10 +395,10 @@ function Policy() {
                   <p>
                     Wir nutzen auf unserer Internetseite „WordPress Stats“.
                     Hierbei handelt es sich um einen Webanalysedienst der{" "}
-                    <address>
+                    <span>
                       Automattic Inc., 132 Hawthorne Street, San Francisco, CA
                       94107, USA,
-                    </address>
+                    </span>
                     Auttomattic Inc. ist nach dem EU-US-Datenschutzschild
                     („EU-US Privacy Shield“) zertifiziert und garantiert
                     Automattic, dass die Datenschutzvorgaben der EU auch bei der
@@ -563,12 +563,12 @@ function Policy() {
                   <p>
                     Auf unserer Website werden auch sogenannte Social Plugins
                     („Plugins“) von Instagram verwendet, das von
-                    <address>
+                    <span>
                       Instagram LLC., 1601 Willow Road, Menlo Park, CA 94025,
                       USA („Instagram“) betrieben wird. Die Plugins sind mit
                       einem Instagram-Logo beispielsweise in Form einer
                       „Instagram-Kamera“ gekennzeichnet.
-                    </address>
+                    </span>
                   </p>
                   <p>
                     Wenn Sie eine Seite unseres Webauftritts aufrufen, die ein
@@ -684,11 +684,11 @@ function Policy() {
                   <p>
                     Wir nutzen für die Einbindung von Videos u.a. den Anbieter
                     Vimeo. Vimeo wird betrieben von Vimeo,
-                    <address>
+                    <span>
                       {" "}
                       LLC mit Hauptsitz in 555 West 18th Street, New York, New
                       York 10011
-                    </address>
+                    </span>
                     Auf einigen unserer Internetseiten verwenden wir Plugins des
                     Anbieters Vimeo. Wenn Sie die mit einem solchen Plugin
                     versehenen Internetseiten unserer Internetpräsenz aufrufen –
