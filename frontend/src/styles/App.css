@@ -7,12 +7,6 @@
 
 .App {
   text-align: center;
-  /* width: 80%; */
-  margin: 0px auto;
-  /* outline: solid green; */
-}
 
-a:visited {
-  color: #0000;
-  outline: solid red;
+  margin: 0px auto;
 }
