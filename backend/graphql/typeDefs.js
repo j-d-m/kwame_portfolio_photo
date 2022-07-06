@@ -1,24 +1,30 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
-  type AdmenType {
+  type AdminType {
     id: ID
     email: String!
     password: String!
   }
-  type AdmenAuthType {
+  type AdminAuthType {
     token: String!
     tokenExpiration: Int!
-    admen: AdmenType
+    admin: AdminType
   }
   type VerifyType {
-    admen: AdmenType
+    admin: AdminType
   }
   type Query {
     getVerify: VerifyType
   }
   type Mutation {
-    loginAdmen(email: String!, password: String!): AdmenAuthType
+    addAdmin(
+      first_name: String!
+      last_name: String!
+      email: String!
+      password: String!
+    ): AdminType
+    loginAdmin(email: String!, password: String!): AdminAuthType
   }
 `;
 module.exports = { typeDefs };
