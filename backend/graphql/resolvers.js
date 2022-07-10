@@ -9,11 +9,13 @@ const resolvers = {
   Query: {
     async getVerify(_, __, { req }) {
       const token = req.headers["token"];
+
       if (token) {
         const decode = jwt.verify(token, "secret-key");
+
         if (decode) {
           const admin = await AdminCollection.findById(decode.adminId);
-          return admin;
+          return { admin: admin };
         } else {
           throw new Error("you have to login as admin ");
         }
@@ -32,7 +34,7 @@ const resolvers = {
       }
       const token = jwt.sign(
         {
-          admenId: admin.id,
+          adminId: admin.id,
           email: admin.email,
           name: "admin",
         },

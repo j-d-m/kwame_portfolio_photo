@@ -25,9 +25,7 @@
   padding: 10px 0px;
   margin-bottom: 20px;
 }
-/* .adminForm-container input[type="email"] {
-  padding: 10px 0px;
-} */
+
 .adminForm-container input:last-child {
   background-color: black;
   color: white;

@@ -18,12 +18,6 @@ const typeDefs = gql`
     getVerify: VerifyType
   }
   type Mutation {
-    # addAdmin(
-    #   first_name: String!
-    #   last_name: String!
-    #   email: String!
-    #   password: String!
-    # ): AdminType
     loginAdmin(email: String!, password: String!): AdminAuthType
   }
 `;
