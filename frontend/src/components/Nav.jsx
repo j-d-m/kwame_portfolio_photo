@@ -5,10 +5,11 @@ import { BsArrowDownShort } from "react-icons/bs";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MyContext } from "../context/context";
 import { useState } from "react";
+import MobilNav from "./MobilNav";
 
 export default function Nav() {
-  const { isAdminLogin, setIsAdminLogin, setAdmin } = useContext(MyContext);
-  const [showNavMobile, setShowNavMobile] = useState(false);
+  const { isAdminLogin, setIsAdminLogin, setAdmin, menuOpen, setMenuOpen } =
+    useContext(MyContext);
 
   function adminSignOut() {
     localStorage.removeItem("admin");
@@ -16,10 +17,11 @@ export default function Nav() {
     setAdmin({});
   }
 
+  console.log(menuOpen);
   return (
     <>
       <div className="container">
-        <Link to="/">
+        <Link to="/" className="logoName">
           <h1>Kwame Boama</h1>
         </Link>
 
@@ -50,54 +52,17 @@ export default function Nav() {
       </div>
       {/* mobile screen  */}
       <div className="containerMobile">
-        <Link to="/">
-          <h1>Kwame Boama</h1>
-        </Link>
-
-        <div>
-          {!showNavMobile ? (
-            <HiMenuAlt3
-              color="#fff"
-              size={25}
-              onClick={() => setShowNavMobile(true)}
-              className="menuIcon"
-            />
-          ) : (
-            <BsArrowDownShort
-              color="#fff"
-              size={25}
-              onClick={() => setShowNavMobile(false)}
-              className="arrowIcon"
-            />
-          )}
+        <div className="menuBtn_Container">
+          <Link to="/">
+            <h1>Kwame Boama</h1>
+          </Link>
+          <div
+            className={menuOpen ? "menu-Btn open" : "menu-Btn"}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <div className="menu-Btn__Burger"></div>
+          </div>
         </div>
-
-        {showNavMobile && (
-          <ul className="nav-linksMobile">
-            {isAdminLogin && (
-              <input
-                type="button"
-                value="Sign out"
-                onClick={adminSignOut}
-                className="signOutBtnMobile"
-              />
-            )}
-
-            <NavLink to="/work" activeclassname="activeMobile">
-              Work
-            </NavLink>
-            <NavLink to="/contact" activeclassname="activeMobile">
-              Contact
-            </NavLink>
-            <NavLink to="/policy" activeclassname="activeMobile">
-              Privacy Policy
-            </NavLink>
-
-            <a href="https://www.instagram.com/kwame_boama/">
-              <AiOutlineInstagram />
-            </a>
-          </ul>
-        )}
       </div>
     </>
   );

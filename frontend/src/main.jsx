@@ -7,9 +7,11 @@ import {
 } from "@apollo/client";
 
 import React from "react";
+
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import Container from "./context/Container";
 import "./main.css";
 const middlewareLink = new ApolloLink((operation, forward) => {
   operation.setContext({
@@ -31,9 +33,11 @@ const client = new ApolloClient({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <Container>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Container>
     </ApolloProvider>
   </React.StrictMode>
 );

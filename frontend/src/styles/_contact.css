@@ -1,5 +1,6 @@
 .contact--container {
   height: 80vh;
+  text-align: center;
 }
 .contact--main {
   display: flex;
@@ -8,7 +9,7 @@
   flex-direction: column;
   height: 40%;
   letter-spacing: 1.5px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .contact--container h2 {

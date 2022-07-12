@@ -8,21 +8,30 @@ import Footer from "./components/Footer";
 import "./styles/App.css";
 import AdminForm from "./components/AdminForm";
 import Container from "./context/Container";
+import MobilNav from "./components/MobilNav";
+import { useContext } from "react";
+import { MyContext } from "./context/context";
+
 function App() {
+  const { menuOpen } = useContext(MyContext);
+
   return (
-    <Container>
-      <div className="App">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/policy" element={<Policy />} />
-          <Route path="/admin" element={<AdminForm />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Container>
+    // <Container>
+    <div className="App">
+      <Nav />
+      <Routes>
+        <Route path="/" element={!menuOpen ? <Hero /> : <MobilNav />} />
+        <Route path="/work" element={!menuOpen ? <Work /> : <MobilNav />} />
+        <Route
+          path="/contact"
+          element={!menuOpen ? <Contact /> : <MobilNav />}
+        />
+        <Route path="/policy" element={!menuOpen ? <Policy /> : <MobilNav />} />
+        <Route path="/admin" element={<AdminForm />} />
+      </Routes>
+      <Footer />
+    </div>
+    // </Container>
   );
 }
 
