@@ -10,6 +10,7 @@ const cookieParser = require("cookie-parser");
 
 app.use(cookieParser());
 const { DB_USER, DB_PASS, DB_HOST, DB_NAME, PORT } = process.env;
+
 const mongoURL = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
 mongoose
   .connect(mongoURL)
