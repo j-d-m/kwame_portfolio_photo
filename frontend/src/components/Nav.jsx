@@ -58,11 +58,14 @@ export default function Nav() {
           </Link>
           <div
             className={menuOpen ? "menu-Btn open" : "menu-Btn"}
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}
           >
             <div className="menu-Btn__Burger"></div>
           </div>
         </div>
+        <MobilNav show={menuOpen} onHide={() => setMenuOpen(!menuOpen)} />
       </div>
     </>
   );
