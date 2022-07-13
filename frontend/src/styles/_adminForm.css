@@ -1,0 +1,44 @@
+.adminForm-container {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+}
+.adminForm-container form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  justify-content: space-between;
+  margin: 0 auto;
+  outline: solid rgba(0, 0, 0, 0.068);
+  padding: 15px;
+}
+.adminForm-container label {
+  text-align: start;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+.adminForm-container input:nth-child(odd) {
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.023);
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+
+.adminForm-container input:last-child {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 10px 0px;
+}
+.adminForm-container input:last-child:hover {
+  background-color: rgba(0, 0, 0, 0.403);
+  outline: none;
+  border: none;
+  color: rgb(0, 0, 0);
+}
