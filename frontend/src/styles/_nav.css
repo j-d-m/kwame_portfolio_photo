@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  outline: solid blue;
+  /* outline: solid blue; */
   background-color: black;
 }
 .container a {

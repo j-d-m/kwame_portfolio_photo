@@ -1,7 +1,7 @@
 .hero {
   /* height: 100vh; */
   /* position: relative; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   max-width: 80vw;
 }
 
@@ -15,6 +15,8 @@
   align-items: center;
   line-height: 70px;
   letter-spacing: 2px;
+  background-color: #000000;
+  color: #ffff;
 }
 
 .my-masonry-grid {
