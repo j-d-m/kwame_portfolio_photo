@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MyContext } from "../context/context";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { Button, Modal } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/_nav.css";
+
 function MobilNav(props) {
   const { isAdminLogin, setIsAdminLogin, setAdmin } = useContext(MyContext);
   function adminSignOut() {
@@ -12,16 +13,34 @@ function MobilNav(props) {
     setIsAdminLogin(false);
     setAdmin({});
   }
-
+  // console.log(props.onHide);
+  function closeNavModalMobile() {
+    props.onHide();
+  }
   return (
     <Modal
       {...props}
-      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-      className="modal-dialog modal-fullscreen"
+      fullscreen={true}
       centered
     >
-      <h1>Hello</h1>
+      {/* i think here is better to merge this component  with nav component because we will use almost same code */}
+      {/* 
+        <div className="menu-Btn__Burger"></div>
+      </div> */}
+      <div className="containerMobile bg-light ">
+        <div className="menuBtn_Container ">
+          <Link to="/">
+            <h1 className="text-dark">Kwame Boama</h1>
+          </Link>
+          <div
+            className={props.show ? "menu-Btn open " : "menu-Btn"}
+            onClick={() => props.onHide()}
+          >
+            <div className="menu-Btn__Burger "></div>
+          </div>
+        </div>
+      </div>
       <div>
         <ul className="nav-linksMobile">
           {isAdminLogin && (
@@ -33,14 +52,26 @@ function MobilNav(props) {
             />
           )}
 
-          <NavLink to="/work" activeclassname="activeMobile">
+          <NavLink
+            to="/work"
+            activeclassname="activeMobile"
+            onClick={closeNavModalMobile}
+          >
             Work
           </NavLink>
 
-          <NavLink to="/contact" activeclassname="activeMobile">
+          <NavLink
+            to="/contact"
+            activeclassname="activeMobile"
+            onClick={closeNavModalMobile}
+          >
             Contact
           </NavLink>
-          <NavLink to="/policy" activeclassname="activeMobile">
+          <NavLink
+            to="/policy"
+            activeclassname="activeMobile"
+            onClick={closeNavModalMobile}
+          >
             Privacy Policy
           </NavLink>
 

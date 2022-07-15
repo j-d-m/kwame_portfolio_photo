@@ -98,9 +98,11 @@
 }
 .menu-Btn.open .menu-Btn__Burger::before {
   transform: rotate(45deg);
+  background: black;
 }
 .menu-Btn.open .menu-Btn__Burger::after {
   transform: rotate(-45deg);
+  background: black;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

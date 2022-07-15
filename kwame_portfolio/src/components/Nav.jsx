@@ -10,6 +10,7 @@ import MobilNav from "./MobilNav";
 export default function Nav() {
   const { isAdminLogin, setIsAdminLogin, setAdmin, menuOpen, setMenuOpen } =
     useContext(MyContext);
+  const [modalShow, setModalShow] = useState(false);
 
   function adminSignOut() {
     localStorage.removeItem("admin");
@@ -17,7 +18,6 @@ export default function Nav() {
     setAdmin({});
   }
 
-  console.log(menuOpen);
   return (
     <>
       <div className="container">
@@ -57,11 +57,12 @@ export default function Nav() {
             <h1>Kwame Boama</h1>
           </Link>
           <div
-            className={menuOpen ? "menu-Btn open" : "menu-Btn"}
-            onClick={() => setMenuOpen(!menuOpen)}
+            className={modalShow ? "menu-Btn open" : "menu-Btn"}
+            onClick={() => setModalShow(true)}
           >
             <div className="menu-Btn__Burger"></div>
           </div>
+          <MobilNav show={modalShow} onHide={() => setModalShow(false)} />
         </div>
       </div>
     </>
