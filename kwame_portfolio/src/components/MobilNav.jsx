@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MyContext } from "../context/context";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { Button, Modal } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Modal } from "react-bootstrap";
 import "../styles/_nav.css";
 
 function MobilNav(props) {
@@ -13,7 +12,7 @@ function MobilNav(props) {
     setIsAdminLogin(false);
     setAdmin({});
   }
-  // console.log(props.onHide);
+
   function closeNavModalMobile() {
     props.onHide();
   }
@@ -23,38 +22,38 @@ function MobilNav(props) {
       aria-labelledby="contained-modal-title-vcenter"
       fullscreen={true}
       centered
+      className="ModalNav"
     >
-      {/* i think here is better to merge this component  with nav component because we will use almost same code */}
-      {/* 
-        <div className="menu-Btn__Burger"></div>
-      </div> */}
-      <div className="containerMobile bg-light ">
-        <div className="menuBtn_Container ">
+      <div
+        className={props.show ? "  ContainerMobileOpen" : "ContainerMobile "}
+      >
+        <div className="MenuBtn_Container ">
           <Link to="/">
             <h1 className="text-dark">Kwame Boama</h1>
           </Link>
           <div
-            className={props.show ? "menu-Btn open " : "menu-Btn"}
+            className={props.show ? "Menu-Btn Open " : "Menu-Btn"}
             onClick={() => props.onHide()}
           >
-            <div className="menu-Btn__Burger "></div>
+            <div className="Menu-Btn__Burger "></div>
           </div>
         </div>
       </div>
-      <div>
-        <ul className="nav-linksMobile">
+
+      <ul className="Nav-LinksMobile ">
+        <div>
           {isAdminLogin && (
             <input
               type="button"
               value="Sign out"
               onClick={adminSignOut}
-              className="signOutBtnMobile"
+              className="SignOutBtnMobile"
             />
           )}
 
           <NavLink
             to="/work"
-            activeclassname="activeMobile"
+            activeclassname="active"
             onClick={closeNavModalMobile}
           >
             Work
@@ -62,24 +61,26 @@ function MobilNav(props) {
 
           <NavLink
             to="/contact"
-            activeclassname="activeMobile"
+            activeclassname="active"
             onClick={closeNavModalMobile}
           >
             Contact
           </NavLink>
+
           <NavLink
             to="/policy"
-            activeclassname="activeMobile"
+            activeclassname="active"
             onClick={closeNavModalMobile}
           >
             Privacy Policy
           </NavLink>
-
+        </div>
+        <div>
           <a href="https://www.instagram.com/kwame_boama/">
             <AiOutlineInstagram />
           </a>
-        </ul>
-      </div>
+        </div>
+      </ul>
     </Modal>
   );
 }

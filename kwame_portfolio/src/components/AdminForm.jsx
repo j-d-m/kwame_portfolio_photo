@@ -5,8 +5,7 @@ import { useContext } from "react";
 import { MyContext } from "../context/context";
 import { useNavigate } from "react-router-dom";
 function AdminForm() {
-  const { admin, setAdmin, setIsAdminLogin, isAdminLogin } =
-    useContext(MyContext);
+  const { setAdmin, setIsAdminLogin, isAdminLogin } = useContext(MyContext);
 
   const navigate = useNavigate();
   const [loginAdmin, { loading, error }] = useMutation(ADMIN_LOGIN);
@@ -33,7 +32,7 @@ function AdminForm() {
     });
   };
   return (
-    <div className="adminForm-container">
+    <div className="adminForm-Container">
       {isAdminLogin ? (
         <h1>You already log in </h1>
       ) : (

@@ -1,8 +1,8 @@
-.contact--container {
+.Contact--Container {
   height: 80vh;
   text-align: center;
 }
-.contact--main {
+.Contact--Main {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,21 +12,21 @@
   /* text-align: center; */
 }
 
-.contact--container h2 {
+.Contact--Container h2 {
   margin-bottom: 100px;
   margin-top: 100px;
 }
 
-h2 span {
+.Contact--Container h2 span {
   padding: 5px;
 }
 
-.mail {
+.Mail {
   text-decoration: none;
   color: black;
   border-bottom: 1px solid #000000;
 }
 
-.mail:visited {
+.Mail:visited {
   color: #000000;
 }
