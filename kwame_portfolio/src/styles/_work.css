@@ -5,12 +5,13 @@
   grid-column-gap: 50px;
   margin: 40px auto;
   width: 100%;
-  border: 1px solid red;
+
   text-align: center;
+  position: relative;
 }
 .itemGallery {
   width: 100%;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 .Work .itemGallery img {
   width: 100%;
@@ -18,10 +19,22 @@
   max-width: 80%;
 }
 .Work a {
-  color: #fff;
-  border-radius: 5px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
 }
-
+.Work a figcaption {
+  position: absolute;
+  display: none;
+}
+.Work a img:hover {
+  opacity: 0.8;
+}
+.Work a img:hover + figcaption {
+  display: block;
+}
 @media screen and (max-width: 790px) {
   .Work {
     grid-template-columns: repeat(auto-fill, 100%);
