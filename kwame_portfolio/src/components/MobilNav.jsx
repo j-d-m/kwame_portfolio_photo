@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MyContext } from "../context/context";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { Button, Modal } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { Modal } from "react-bootstrap";
 import "../styles/_nav.css";
+
 function MobilNav(props) {
   const { isAdminLogin, setIsAdminLogin, setAdmin } = useContext(MyContext);
   function adminSignOut() {
@@ -13,42 +13,74 @@ function MobilNav(props) {
     setAdmin({});
   }
 
+  function closeNavModalMobile() {
+    props.onHide();
+  }
   return (
     <Modal
       {...props}
-      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-      className="modal-dialog modal-fullscreen"
+      fullscreen={true}
       centered
+      className="ModalNav"
     >
-      <h1>Hello</h1>
-      <div>
-        <ul className="nav-linksMobile">
+      <div
+        className={props.show ? "  ContainerMobileOpen" : "ContainerMobile "}
+      >
+        <div className="MenuBtn_Container ">
+          <Link to="/">
+            <h1 className="text-dark">Kwame Boama</h1>
+          </Link>
+          <div
+            className={props.show ? "Menu-Btn Open " : "Menu-Btn"}
+            onClick={() => props.onHide()}
+          >
+            <div className="Menu-Btn__Burger "></div>
+          </div>
+        </div>
+      </div>
+
+      <ul className="Nav-LinksMobile ">
+        <div>
           {isAdminLogin && (
             <input
               type="button"
               value="Sign out"
               onClick={adminSignOut}
-              className="signOutBtnMobile"
+              className="SignOutBtnMobile"
             />
           )}
 
-          <NavLink to="/work" activeclassname="activeMobile">
+          <NavLink
+            to="/work"
+            activeclassname="active"
+            onClick={closeNavModalMobile}
+          >
             Work
           </NavLink>
 
-          <NavLink to="/contact" activeclassname="activeMobile">
+          <NavLink
+            to="/contact"
+            activeclassname="active"
+            onClick={closeNavModalMobile}
+          >
             Contact
           </NavLink>
-          <NavLink to="/policy" activeclassname="activeMobile">
+
+          <NavLink
+            to="/policy"
+            activeclassname="active"
+            onClick={closeNavModalMobile}
+          >
             Privacy Policy
           </NavLink>
-
+        </div>
+        <div>
           <a href="https://www.instagram.com/kwame_boama/">
             <AiOutlineInstagram />
           </a>
-        </ul>
-      </div>
+        </div>
+      </ul>
     </Modal>
   );
 }

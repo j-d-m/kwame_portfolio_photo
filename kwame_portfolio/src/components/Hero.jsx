@@ -3,7 +3,7 @@ import * as React from "react";
 function Hero() {
   return (
     <div>
-      <div className="quote">
+      <div className="Quote">
         <p>
           And I said this, “I fuckin’ hate being poor.” And my <br /> dad got
           really upset. He didn’t scream or howl. That <br /> wasn’t his way. He

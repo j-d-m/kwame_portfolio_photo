@@ -1,11 +1,11 @@
-.hero {
+.Hero {
   /* height: 100vh; */
   /* position: relative; */
   /* border: 1px solid red; */
   max-width: 80vw;
 }
 
-.quote {
+.Quote {
   margin: 0px auto;
   height: 100vh;
   font-size: 3rem;

@@ -3,13 +3,13 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 function Contact() {
   return (
-    <div className="contact--container">
+    <div className="Contact--Container">
       {" "}
       <h2>
         Photographer <span>|</span> Director
       </h2>
-      <main className="contact--main">
-        <a className="mail" href="mailto:kwameboama@hotmail.com">
+      <main className="Contact--Main">
+        <a className="Mail" href="mailto:kwameboama@hotmail.com">
           {" "}
           Mail:<span>kwameboama@hotmail.com</span>
         </a>

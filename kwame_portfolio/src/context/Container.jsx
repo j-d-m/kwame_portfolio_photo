@@ -6,7 +6,7 @@ import { MyContext } from "./context";
 function Container({ children }) {
   const [admin, setAdmin] = useState({});
   const [isAdminLogin, setIsAdminLogin] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     fetch("http://localhost:5000/graphql", {
       method: "POST",
@@ -40,8 +40,6 @@ function Container({ children }) {
         setAdmin,
         isAdminLogin,
         setIsAdminLogin,
-        menuOpen,
-        setMenuOpen,
       }}
     >
       {children}

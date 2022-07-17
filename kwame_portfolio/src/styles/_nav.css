@@ -1,18 +1,35 @@
-.container {
+/*this class ContainerModalClose is active only when the modal was open and the user resize the window . we have to make the background white for the navbar*/
+/* .ContainerModalClose {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* outline: solid blue; */
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 45px 0;
 }
-.container a {
+.ContainerModalClose a {
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  position: relative;
+} */
+/* //////////////////////////////// */
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  padding: 45px 0;
+}
+.Container a {
   text-decoration: none;
   list-style-type: none;
   color: white;
   font-size: 1.3rem;
   position: relative;
 }
-.container a:not(.logoName):not(:last-child):not(.signOutBtn)::after {
+.Container a:not(.LogoName):not(:last-child):not(.SignOutBtn)::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -25,40 +42,38 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-.container a:not(:last-child):not(.signOutBtn):hover:after {
+.Container a:not(:last-child):not(.SignOutBtn):hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-/* .active {
-  padding-bottom: 8px;
-
-  border-bottom: 1px solid #fff;
-} */
-.nav-links a {
+.Nav-Links .active {
+  color: rgba(255, 255, 255, 0.711) !important;
+}
+.Nav-Links a {
   margin-left: 20px;
 }
-.nav-links :last-child {
+.Nav-Links :last-child {
   margin-left: 30px;
 }
-.nav-links .signOutBtn {
+.Nav-Links .SignOutBtn {
   background: none;
   outline: solid #fff;
   color: #fff;
   cursor: pointer;
 }
-.nav-links .signOutBtn:hover {
+.Nav-Links .SignOutBtn:hover {
   background-color: #fff;
   color: #000;
 }
 /* mobile style  */
-.menuBtn_Container {
+.MenuBtn_Container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0px 20px;
 }
 
-.menu-Btn {
+.Menu-Btn {
   position: relative;
   display: flex;
   justify-content: center;
@@ -68,97 +83,130 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.menu-Btn__Burger {
+.Menu-Btn__Burger {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menu-Btn__Burger::before,
-.menu-Btn__Burger::after {
+.Menu-Btn__Burger::before,
+.Menu-Btn__Burger::after {
   content: "";
   position: absolute;
   width: 50px;
-  height: 2px;
+  height: 1px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.2s ease-in-out;
 }
-.menu-Btn__Burger::before {
+.Menu-Btn__Burger::before {
   transform: translateY(-10px);
 }
-.menu-Btn__Burger::after {
+.Menu-Btn__Burger::after {
   transform: translateY(5px);
 }
 
-.menu-Btn.open .menu-Btn__Burger {
+.Menu-Btn.Open .Menu-Btn__Burger {
   transform: translateX(10px);
   background: transparent;
   box-shadow: none;
 }
-.menu-Btn.open .menu-Btn__Burger::before {
+.Menu-Btn.Open .Menu-Btn__Burger::before {
   transform: rotate(45deg);
+  background: black;
 }
-.menu-Btn.open .menu-Btn__Burger::after {
+.Menu-Btn.Open .Menu-Btn__Burger::after {
   transform: rotate(-45deg);
+  background: black;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 790px) {
-  .container {
+  .Container {
     display: none;
   }
-  .containerMobile {
+  .ContainerMobile {
     display: block;
     background-color: #000;
     width: 100%;
+    padding: 35px 0;
   }
-  .containerMobile a:first-child {
+  .ContainerMobile a:first-child {
     text-align: center;
   }
-  .containerMobile a {
+  .ContainerMobile a {
     text-decoration: none;
     color: white;
     padding: 15px 0px;
   }
-  .containerMobile a h1 {
+  .ContainerMobile a h1 {
     margin-top: 0;
   }
-  .nav-linksMobile {
+  .Nav-LinksMobile {
     padding: 0;
+
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .Nav-LinksMobile div:first-child {
+    height: 50%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    list-style-type: none;
   }
-  .nav-linksMobile a:not(:last-child):hover {
+  .Nav-LinksMobile div a {
+    font-size: 2.5rem;
+    color: #000;
+    margin: 10px 0;
+  }
+  .Nav-LinksMobile .active {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+  }
+  /* .Nav-LinksMobile a:not(:last-child):hover {
+    background-color: white;
+    color: black;
+  } */
+  .Nav-LinksMobile div:first-child a:hover {
     background-color: white;
     color: black;
   }
 
-  .nav-linksMobile .signOutBtnMobile {
-    background: none;
-
-    padding: 15px 0px;
+  .Nav-LinksMobile .SignOutBtnMobile {
+    background: rgb(224, 220, 220);
+    padding: 10px;
     color: rgb(0, 0, 0);
     cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.41);
   }
-  .nav-linksMobile .signOutBtnMobile:hover {
+  .Nav-LinksMobile .SignOutBtnMobile:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+    box-shadow: none;
+  }
+  /* open modal nav style  */
+  .ModalNav a {
+    text-decoration: none;
+  }
+  .ContainerMobileOpen {
+    background-color: none;
+    padding: 35px 0;
+  }
+  .Open .Menu-Btn__Burger::after,
+  .Open .Menu-Btn__Burger::before {
+    background: #000;
   }
 }
 @media screen and (min-width: 791px) {
-  .containerMobile {
+  .ContainerMobile {
     display: none;
   }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media screen and (min-width: 992px) {
-  incase we need it 
-} */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media screen and (min-width: 1200px) {
-  incase we need it 
-} */
