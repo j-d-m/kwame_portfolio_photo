@@ -8,7 +8,7 @@ import MobilNav from "./MobilNav";
 export default function Nav() {
   const { isAdminLogin, setIsAdminLogin, setAdmin } = useContext(MyContext);
   const [modalShow, setModalShow] = useState(false);
-  const [isModalMobileClose, setIsModalMobileClose] = useState(false);
+  // const [isModalMobileClose, setIsModalMobileClose] = useState(false);
 
   function adminSignOut() {
     localStorage.removeItem("admin");
@@ -16,14 +16,13 @@ export default function Nav() {
     setAdmin({});
   }
   // this function is called when the modal is open on small size and user resize the width for window to bigger than 790px then the modal will close automatically
-  // function handleResize() {
-  //   if (window.innerWidth > 790) {
-
-  //     setModalShow(false);
-  //     setIsModalMobileClose(true);
-  //   }
-  // }
-  // window.addEventListener("resize", handleResize);
+  function handleResize() {
+    if (window.innerWidth > 790) {
+      setModalShow(false);
+      // setIsModalMobileClose(true);
+    }
+  }
+  window.addEventListener("resize", handleResize);
   // //////
   return (
     <>
