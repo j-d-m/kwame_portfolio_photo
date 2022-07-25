@@ -1,14 +1,17 @@
 .policyMainContainer {
-  /* outline: solid orange; */
   width: 100%;
+  outline: solid darkmagenta;
   background: white;
+  margin-top: 40px;
+  min-height: 85vh;
 }
 
 .policy--container {
   color: black;
-  width: 800px;
+  width: 71%;
   word-wrap: break-word;
-  margin-left: 260px;
+
+  margin: 0 auto;
   text-align: left;
   font-size: 16px;
 }
@@ -16,4 +19,34 @@
   font-size: 16px;
   padding-right: 10px;
   color: black;
+}
+.PolicyBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 20px;
+}
+.PolicyBtn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 992px) {
+  .policy--container {
+    color: black;
+    width: 90vw;
+    word-wrap: wrap;
+    text-align: left;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .policy--container,
+  .email {
+    font-size: 12px;
+    padding-right: 10px;
+    color: black;
+  }
+  .policy--container ol h5 {
+    font-size: 14px;
+  }
 }

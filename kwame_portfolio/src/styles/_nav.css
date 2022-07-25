@@ -46,9 +46,9 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.Nav-Links .active {
+/* .Nav-Links .active {
   color: rgba(255, 255, 255, 0.711) !important;
-}
+} */
 .Nav-Links a {
   margin-left: 20px;
 }

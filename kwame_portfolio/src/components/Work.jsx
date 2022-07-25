@@ -5,30 +5,33 @@ function Work() {
   return (
     // <div className="Container-work">
     <div className="Work">
-      <div className="itemGallery">
+      <figure className="itemGallery">
         <Link to="/ruth">
           <img src="https://picsum.photos/200/300?random=1" alt="img" />
-          <h2>Ruth</h2>
+          <figcaption>Ruth</figcaption>
         </Link>
-      </div>
-      <div className="itemGallery">
+      </figure>
+
+      <figure className="itemGallery">
         <Link to="/great-outdoors">
           <img src="https://picsum.photos/200/300?random=1" alt="img" />
-          <h2>The Great Outdoors</h2>
+          <figcaption>The Great Outdoors</figcaption>
         </Link>
-      </div>
-      <div className="itemGallery">
+      </figure>
+
+      <figure className="itemGallery">
         <Link to="/residents-of-brighton">
           <img src="https://picsum.photos/200/300?random=1" alt="img" />
-          <h2>Residents Of Brighton</h2>
+          <figcaption>Residents Of Brighton</figcaption>
         </Link>
-      </div>
-      <div className="itemGallery">
+      </figure>
+
+      <figure className="itemGallery">
         <Link to="/urban-sport">
           <img src="https://picsum.photos/200/300?random=1" alt="img" />
-          <h2>Urban Sport</h2>
+          <figcaption>Urban Sport</figcaption>
         </Link>
-      </div>
+      </figure>
     </div>
     // </div>
   );
