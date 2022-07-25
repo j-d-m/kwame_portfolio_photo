@@ -1,7 +1,9 @@
 .policyMainContainer {
   width: 100%;
+  outline: solid darkmagenta;
   background: white;
   margin-top: 40px;
+  min-height: 85vh;
 }
 
 .policy--container {
